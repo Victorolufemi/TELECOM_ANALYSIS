@@ -1,0 +1,258 @@
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Form
+        </title>
+        <link rel="stylesheet" href="vic.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form action="predicts", method ="GET">
+       <div class="form">
+           <h2>TELLCO PREDICTION</h2>
+           <div class="one">
+             <p class="control">
+                <label for="session">Session_frequency
+                  <input class="alpha" type="number" name="sessions" placeholder="session_frequency">
+                </label>
+              </p> </br></br>
+          </div>
+          <div class="two">
+            <p class="control"></p>
+            <label for="Avg_RTT">Avg_RTT_UPLOAD
+              <input class="bravo" type="number" name="Avg_RTT_UL" placeholder="Avg_RTT_UL">
+            </label>
+          </p> </br></br>
+            </div>
+    <div class="three">
+          <label for="RTT_UL">Avg_RTT_DOWNLOAD
+          <input class="charlie" type="number" name="Avg_RTT_DL" placeholder="Avg_RTT_DL">
+        </label> </br></br>
+    </div>
+    <div class="four">
+        <label for="Bearer_DL">Avg_BearerTP_DOWNLOAD
+          <input class="delta" type="number" name="Avg_BearerTP_UL" placeholder="Avg_BearerTP_UL">
+        </label> </br></br>
+    </div>
+    <div class="five">
+        <label for="Bearer_UL">Avg_BearerTP_UPLOAD
+          <input class="echo" type="number" name="Avg_BearerTP_DL" placeholder="Avg_BearerTP_DL">
+        </label> </br></br>
+    </div>
+    <div class="six">
+        <label for="Retrans_UL">TCP_Retrans_vol_UPLOAD
+          <input class="foxtrot" type="number" name="TCP_Retrans_vol_UL" placeholder="TCP_Retrans_vol_UL">
+        </label> </br></br>
+    </div>
+    <div class="seven">
+        <label for="Retrans_DL">TCP_Retrans_vol_DOWNLOAD
+          <input class="golf" type="number" name="TCP_Retrans_vol_DL" placeholder="TCP_Retrans_vol_DL">
+        </label> </br></br>
+    </div>
+    <div class="eight">
+      <label for="Total_UPLOAD">Total_UPLOAD
+        <input class="golf" type="number" name="Total_UL" placeholder="Total_UPLOAD">
+      </label> </br></br>
+    </div>
+    <div class="nine">
+      <label for="Total_DOWNLOAD">Total_DOWNLOAD
+        <input class="golf" type="number" name="TCP_Retrans_vol_DL" placeholder="TCP_Retrans_vol_DL">
+      </label> </br></br>
+    </div>
+    <div class="nine">
+    <label for="Duration">Duration
+      <input class="golf" type="number" name="Durations" placeholder="Duration">
+    </label> </br></br>
+    </div>
+    <div class="ten">
+          <button type="submit">PREDICT</button>
+        </div>
+        </div>
+    </form>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TELLCO PREDICTION</title>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css"> -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        html{
+            overflow: hidden;
+        }
+
+        body{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        #login-form-container{
+            margin-top: 100px;
+            margin-left: 700px;
+            padding-left: 80px;
+            position: absolute;
+            width: 500px;
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(to bottom right,purple,#cc1094,blue);
+            border-radius: 16px;
+            box-shadow: 0px 7px 7px #d0d0d0, 0px -7px 7px #e9e8e8;
+        }
+        form {
+          width: 500px;
+        }
+        .content {
+          width: 450px;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 22px;
+        }
+        .input {
+         margin-left: 20px;
+
+        }
+        .media {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 26px;
+          padding-left: 55px;
+          padding-bottom: 20px;
+        }
+        button {
+          margin-left: 100px;
+          margin-top: 40px;
+          width: 200px;
+          height: 40px;
+          border-radius: 30px;
+          background-color: #3cc962;
+          color: white;
+          font-weight: bold;
+        }
+        .one {
+          margin-left: 140px;
+          height: 20px;
+        }
+        .two {
+          margin-left: 95px;
+          height: 20px;
+        }
+        .three {
+          margin-left: 90px;
+          height: 20px;
+        }
+        .four {
+          margin-left: 33px;
+          height: 20px;
+        }
+        .five {
+          margin-left: 30px;
+          height: 20px;
+        }
+        .six {
+          height: 20px;
+        }
+        .seven {
+          height: 20px;
+        }
+        .eight {
+          margin-left: 130px;
+          height: 20px;
+        }
+        .nine {
+          margin-left: 130px;
+          height: 20px;
+        }
+        .ten {
+          margin-left: 130px;
+          height: 20px;
+        }
+    </style>
+</head>	
+<body>
+    <div id="login-form-container">
+        <form action="predicts" method="GET">
+            <div class="card" style="width: 400px">
+            <div class="card-content">
+                <div class="media">
+                <div class="is-size-4 has-text-centered">TELLCO PREDICTION</div>
+                </div>
+                <div class="content">
+
+                <div class="field">
+                    <p class="control">
+                      sessions: <input class="one" type="number"  name="sessions" id="sess">
+                    </p>
+                    
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                      Avg_RTT_UL: <input class="two" type="number"  name="Avg_RTT_UL" id="att_ul">
+                    </p>
+                </div>
+
+                <div class="field">
+                    <p class="control">
+                      Avg_RTT_DL: <input class="three" type="number"  name="Avg_RTT_DL" id="att_ul">
+                    </p>
+                </div>
+
+                <div class="field">
+                  <p class="control">
+                    Avg_BearerTP_UL: <input class="four" type="number" name="Avg_BearerTP_UL" id="bearer_ul">
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control">
+                      Avg_BearerTP_DL: <input class="five" type="number"  name="Avg_BearerTP_DL" id="bearer_dl">
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control">
+                    TCP_Retrans_vol_UL: <input class="six" type="number"  name="TCP_Retrans_vol_UL" id="vol_ul">
+                  </p>
+                </div>
+                <div class="field">
+                <p class="control">
+                  TCP_Retrans_vol_DL: <input class="seven" type="number"  name="TCP_Retrans_vol_DL" id="vol_dl">
+                </p>
+                </div>
+                <div class="field">
+                  <p class="control">
+                    Total_UL: <input class="eight" type="number"  name="Total_UL" id="total_ul">
+                  </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                      Total_DL: <input class="nine" type="number"  name="Total_DL" id="total_dl">
+                    </p>
+                </div>
+                <div class="field">
+                  <p class="control">
+                    Duration: <input class="ten" type="number"  name="Durations" id="dur">
+                  </p>
+                </div>
+                
+                <div class="field">
+                    <button class="button is-fullwidth is-rounded is-success">PREDICT</button>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
